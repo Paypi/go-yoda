@@ -32,8 +32,12 @@ func ToYodaSpeak(s string) string {
 
 func handleYodaRequest(w http.ResponseWriter, r *http.Request) {
 	// fetch auth Header and check subscriberToken
-	token := r.Header.Get("Authorization")
-	user, err := paypi.Authenticate(token)
+	auth := strings.Split(r.Header.Get("Authorization"), "Bearer ")
+	if len(auth) != 2 {
+		http.Error(w, "User token not given", http.StatusUnauthorized)
+		return
+	}
+	user, err := paypi.Authenticate(auth[1])
 
 	if err != nil {
 		http.Error(w, "User token is unauthorized", http.StatusUnauthorized)
