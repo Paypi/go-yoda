@@ -31,16 +31,16 @@ func ToYodaSpeak(s string) string {
 }
 
 func handleYodaRequest(w http.ResponseWriter, r *http.Request) {
-	// fetch auth Header and check subscriberToken
 	auth := strings.Split(r.Header.Get("Authorization"), "Bearer ")
 	if len(auth) != 2 {
 		http.Error(w, "User token not given", http.StatusUnauthorized)
 		return
 	}
-	user, err := paypi.Authenticate(auth[1])
 
+	// Check the subscriberToken with PayPI
+	user, err := paypi.Authenticate(auth[1])
 	if err != nil {
-		http.Error(w, "User token is unauthorized", http.StatusUnauthorized)
+		http.Error(w, "Unauthorized the request is", http.StatusUnauthorized)
 		return
 	}
 
@@ -52,7 +52,7 @@ func handleYodaRequest(w http.ResponseWriter, r *http.Request) {
 		ChargeIdentifier: "<STATIC_CHARGE_IDENTIFIER>",
 	})
 	if err != nil {
-		http.Error(w, "Unable to make charge", http.StatusServiceUnavailable)
+		http.Error(w, "Unable to make charge, the server is", http.StatusServiceUnavailable)
 		return
 	}
 
