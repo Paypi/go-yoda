@@ -1,8 +1,11 @@
 # go-yoda
 An example API, implementing PayPI authentication.
-
+  
 # Yoda API Live Example
-Subscribe to PayPI's hosted [Yoda API here](https://app.staging.paypi.dev/subscribe/c2VydmljZToxNDlkZjEwMS1lMWYwLTRlZDQtYTgzMy03YzQ1NzAzYjAwYjc=)
+<a href="https://app.staging.paypi.dev/subscribe/c2VydmljZToxNDlkZjEwMS1lMWYwLTRlZDQtYTgzMy03YzQ1NzAzYjAwYjc=">
+  <img src="https://staging.paypi.dev/assets/getKey.svg" alt="Logo" height="30">
+</a>
+</br>
 
 HTTP
 ```HTTP
