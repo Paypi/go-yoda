@@ -2,7 +2,7 @@
 An example API, implementing PayPI authentication.
   
 # Yoda API Live Example
-<a href="https://app.paypi.dev/subscribe/c2VydmljZTplOTUzYzI4Yi01Y2I2LTQxMjEtODYwYy1hOTdlNmI5NDcxZTk=">
+<a href="https://app.paypi.dev/subscribe/c2VydmljZTozMDhlNTI2NS0xY2E4LTQ5ZTgtYWYzMi01MzdjZGYyYjNhN2Y=">
   <img src="https://staging.paypi.dev/assets/getKey.svg" alt="Logo" height="30">
 </a>
 </br>
