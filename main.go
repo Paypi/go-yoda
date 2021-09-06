@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/Paypi/paypi-go"
+	"github.com/paypi/paypi-go"
 )
 
 // ToYodaSpeak cuts a string into two peices and flips them round.
